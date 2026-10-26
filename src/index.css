@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: 246 247 245;
+  --card: 255 255 255;
+  --ink: 15 23 22;
+  --muted: 107 120 117;
+  --line: 233 237 235;
+  --soft: 238 241 240;
+  color-scheme: light;
+}
+.dark {
+  --canvas: 8 17 16;
+  --card: 16 29 27;
+  --ink: 236 242 240;
+  --muted: 150 165 162;
+  --line: 33 51 48;
+  --soft: 24 40 37;
+  color-scheme: dark;
+}
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html[lang='bn'] body { @apply font-bn; }
+  ::selection { background: #E2F97E; color: #06342F; }
+  * { scrollbar-width: thin; scrollbar-color: rgb(var(--line)) transparent; }
+  :focus-visible { @apply outline-none ring-2 ring-brand-600/50; }
+}
+
+@layer components {
+  .card { @apply bg-card rounded-3xl shadow-card; }
+  .btn {
+    @apply inline-flex h-11 select-none items-center justify-center gap-2 whitespace-nowrap rounded-full px-5 text-sm font-medium transition duration-200 active:scale-[.97] disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-lime { @apply btn bg-lime text-brand-900 hover:bg-lime-600 hover:shadow-md; }
+  .btn-dark { @apply btn bg-brand-900 text-white hover:bg-brand-800; }
+  .btn-ghost { @apply btn border border-line bg-card text-ink hover:bg-soft; }
+  .btn-icon { @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-card text-ink transition duration-200 hover:bg-soft active:scale-95; }
+  .field {
+    @apply h-11 w-full rounded-full border border-line bg-card px-4 text-sm text-ink outline-none transition placeholder:text-muted focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20;
+  }
+  .field-box { @apply w-full rounded-2xl border border-line bg-card px-4 py-3 text-sm outline-none transition placeholder:text-muted focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20; }
+  .label { @apply mb-1.5 block text-xs font-medium text-muted; }
+  .th { @apply px-4 py-3 text-left text-xs font-medium text-muted first:rounded-l-2xl last:rounded-r-2xl; }
+  .td { @apply px-4 py-3 text-sm; }
+}
+
+/* Skeleton shimmer */
+.skeleton { position: relative; overflow: hidden; background: rgb(var(--soft)); border-radius: 12px; }
+.skeleton::after {
+  content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(var(--card) / .6), transparent);
+  animation: shimmer 1.3s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ---------- Printing (POS receipts / invoices) ---------- */
+#print-root { display: none; }
+@media print {
+  html, body { background: #fff !important; height: auto !important; }
+  #root { display: none !important; }
+  #print-root { display: block !important; }
+  .no-print { display: none !important; }
+}
