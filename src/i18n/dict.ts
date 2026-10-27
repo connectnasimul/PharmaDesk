@@ -201,6 +201,11 @@ const en: Record<string, string> = {
   'refill.msg': 'it may be time to refill your medicines',
   'set.refill': 'Refill reminder after (days)',
   'set.refillDesc': 'Customers whose medicine was bought this many days ago show as refill due',
+  'set.sample': 'Sample medicine catalogue',
+  'set.sampleDesc': 'Adds 100+ common Bangladeshi medicines and supplies. Your existing products are kept.',
+  'set.sampleBtn': 'Add medicines',
+  'set.sampleDone': 'Products added',
+  'set.sampleNone': 'All sample medicines are already in your list',
 };
 
 const bn: Record<string, string> = {
@@ -393,6 +398,11 @@ const bn: Record<string, string> = {
   'refill.msg': 'আপনার ওষুধগুলো আবার নেওয়ার সময় হয়ে থাকতে পারে',
   'set.refill': 'রিফিল রিমাইন্ডার (দিন পর)',
   'set.refillDesc': 'যত দিন আগে ওষুধ কেনা হয়েছে তত দিন পার হলে কাস্টমার "রিফিলের সময়" তালিকায় আসবে',
+  'set.sample': 'নমুনা ওষুধের তালিকা',
+  'set.sampleDesc': 'বাংলাদেশে প্রচলিত ১০০+ ওষুধ ও সরঞ্জাম যোগ করে। আপনার আগের পণ্য অক্ষত থাকে।',
+  'set.sampleBtn': 'ওষুধ যোগ করুন',
+  'set.sampleDone': 'পণ্য যোগ হয়েছে',
+  'set.sampleNone': 'নমুনা ওষুধ আগেই তালিকায় আছে',
 };
 
 export const dict: Record<'en' | 'bn', Record<string, string>> = { en, bn };

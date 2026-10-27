@@ -128,15 +128,18 @@ export default function Sales() {
                 shape={(p: any) => {
                   const { x, y, width, height, index } = p;
                   const bw = Math.min(width, 34);
+                  const base = y + height; // x-axis baseline
+                  const h = height > 0 ? Math.max(height, bw) : 0; // zero revenue draws no capsule
+                  const top = base - h;
                   const bx = x + (width - bw) / 2;
                   const on = index === active;
                   return (
                     <g onMouseEnter={() => setHover(index)} style={{ cursor: 'pointer' }}>
-                      <rect x={bx} y={y} width={bw} height={Math.max(height, bw)} rx={bw / 2} fill={on ? 'url(#stripe2)' : '#0B4A41'} />
+                      {h > 0 && <rect x={bx} y={top} width={bw} height={h} rx={bw / 2} fill={on ? 'url(#stripe2)' : '#0B4A41'} />}
                       {on && (
                         <g>
-                          <rect x={bx + bw / 2 - 42} y={y - 38} width={84} height={30} rx={10} fill="rgb(var(--card))" stroke="rgb(var(--line))" />
-                          <text x={bx + bw / 2} y={y - 19} textAnchor="middle" fontSize={12} fontWeight={700} fill="rgb(var(--ink))">{money(series[index]?.v ?? 0, 0)}</text>
+                          <rect x={bx + bw / 2 - 42} y={top - 38} width={84} height={30} rx={10} fill="rgb(var(--card))" stroke="rgb(var(--line))" />
+                          <text x={bx + bw / 2} y={top - 19} textAnchor="middle" fontSize={12} fontWeight={700} fill="rgb(var(--ink))">{money(series[index]?.v ?? 0, 0)}</text>
                         </g>
                       )}
                     </g>

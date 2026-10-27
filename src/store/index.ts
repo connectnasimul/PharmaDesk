@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Customer, Order, OrderItem, PayMethod, Payment, Product, Purchase, PurchaseItem, PurchaseReturn, Settings, Supplier } from '../types';
-import { seedAll } from '../data/seed';
+import { makeProducts, seedAll } from '../data/seed';
 
 export const defaultSettings: Settings = {
   lang: 'en',
@@ -72,6 +72,7 @@ interface State {
   restoreOrder: (o: Order) => void;
   restoreProduct: (p: Product) => void;
   importProducts: (rows: Product[]) => number;
+  addSampleProducts: () => number;
   resetDemo: () => void;
   importData: (json: string) => boolean;
 }
@@ -165,6 +166,18 @@ export const useStore = create<State>()(
           const exists = s.products.some((x) => x.id === p.id);
           return { products: exists ? s.products.map((x) => (x.id === p.id ? p : x)) : [p, ...s.products] };
         }),
+
+      // Adds the built-in sample catalogue without touching existing products (matched by name + strength)
+      addSampleProducts: () => {
+        const s = get();
+        const key = (p: Product) => (p.name + '|' + p.strength).toLowerCase();
+        const have = new Set(s.products.map(key));
+        const fresh = makeProducts().filter((p) => !have.has(key(p)));
+        let max = s.products.reduce((m, p) => Math.max(m, Number(p.id.replace(/\D/g, '')) || 0), 0);
+        const added = fresh.map((p) => ({ ...p, id: 'P' + String(++max).padStart(3, '0') }));
+        if (added.length) set({ products: [...s.products, ...added] });
+        return added.length;
+      },
 
       importProducts: (rows) => {
         const s = get();

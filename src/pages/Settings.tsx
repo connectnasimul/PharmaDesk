@@ -1,5 +1,5 @@
 import { useRef, type ReactNode } from 'react';
-import { Download, RotateCcw, Upload } from 'lucide-react';
+import { Download, Plus, RotateCcw, Upload } from 'lucide-react';
 import type { Role } from '../types';
 import { useStore } from '../store';
 import { useUI } from '../store/ui';
@@ -34,6 +34,7 @@ export default function Settings() {
   const { t, settings } = useApp();
   const set = useStore((s) => s.setSettings);
   const reset = useStore((s) => s.resetDemo);
+  const addSample = useStore((s) => s.addSampleProducts);
   const importData = useStore((s) => s.importData);
   const toast = useUI((s) => s.toast);
   const fileRef = useRef<HTMLInputElement>(null);
@@ -146,6 +147,9 @@ export default function Settings() {
                 <button className="btn-ghost" onClick={() => fileRef.current?.click()}><Upload size={16} /> {t('set.restoreBtn')}</button>
                 <input ref={fileRef} type="file" accept="application/json" hidden onChange={(e) => restore(e.target.files?.[0])} />
               </div>
+            </Row>
+            <Row title={t('set.sample')} desc={t('set.sampleDesc')}>
+              <button className="btn-ghost" onClick={() => { const n = addSample(); toast(n ? `${t('set.sampleDone')}: ${n}` : t('set.sampleNone'), n ? 'success' : 'info'); }}><Plus size={16} /> {t('set.sampleBtn')}</button>
             </Row>
             <Row title={t('set.reset')} desc={t('set.resetDesc')}>
               <button className="btn-ghost text-rose-600" onClick={() => { if (window.confirm(t('set.resetConfirm'))) { reset(); toast(t('toast.reset')); } }}><RotateCcw size={16} /> {t('set.resetBtn')}</button>
