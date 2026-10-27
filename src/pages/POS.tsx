@@ -187,9 +187,9 @@ export default function POS() {
 
   return (
     <Page>
-      <div className="grid gap-4 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_440px]">
+      <div className="grid gap-4 lg:h-[calc(100vh-9.5rem)] lg:min-h-[560px] lg:grid-cols-[minmax(0,1fr)_minmax(340px,400px)] xl:grid-cols-[minmax(0,1fr)_minmax(380px,430px)]">
         {/* LEFT: product finder */}
-        <section className="card p-5">
+        <section className="card flex min-h-0 min-w-0 flex-col p-4 lg:p-5">
           <div className="flex flex-wrap items-center gap-2">
             <div className="relative min-w-[220px] flex-1">
               <ScanLine size={17} className="pointer-events-none absolute left-4 top-3.5 text-muted" />
@@ -209,7 +209,7 @@ export default function POS() {
             )}
           </div>
 
-          <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-1">
+          <div className="-mx-1 mt-3 flex shrink-0 gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:thin]">
             {['', ...categories].map((c) => (
               <button key={c || 'all'} onClick={() => setCat(c)} className={cn('shrink-0 rounded-full px-4 py-2 text-xs font-medium transition', cat === c ? 'bg-brand-800 text-white' : 'bg-soft hover:bg-line')}>
                 {c || t('all')}
@@ -217,7 +217,8 @@ export default function POS() {
             ))}
           </div>
 
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-3 min-h-0 flex-1 overflow-y-auto overflow-x-hidden px-1 pb-1 pt-2 lg:-mx-1">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 2xl:grid-cols-4">
             {list.map((p) => {
               const st = stockStatus(p);
               const sellable = isSellable(p);
@@ -247,11 +248,12 @@ export default function POS() {
           </div>
           {list.length >= limit && <button className="btn-ghost mx-auto mt-4" onClick={() => setLimit((l) => l + 60)}>{t('showMore')}</button>}
           {list.length === 0 && <div className="py-12 text-center text-sm text-muted">{t('empty.products')}</div>}
+          </div>
         </section>
 
         {/* RIGHT: cart */}
-        <section className="card flex h-fit flex-col p-5 lg:sticky lg:top-24">
-          <div className="mb-3 flex items-center justify-between">
+        <section className="card flex min-h-0 min-w-0 flex-col p-4 lg:overflow-y-auto lg:p-5">
+          <div className="mb-2 flex shrink-0 items-center justify-between">
             <h2 className="text-lg font-bold">{t('pos.cart')} {lines.length > 0 && <span className="text-muted">({num(lines.length)})</span>}</h2>
             <div className="flex gap-1">
               <button className="btn-icon h-9 w-9" onClick={hold} disabled={!cart.length} title={t('pos.hold')} aria-label={t('pos.hold')}><Pause size={15} /></button>
@@ -259,8 +261,8 @@ export default function POS() {
             </div>
           </div>
 
-          <div className="mb-3 flex gap-2">
-            <div className="relative flex-1">
+          <div className="mb-2 flex shrink-0 gap-2">
+            <div className="relative min-w-0 flex-1">
               <select ref={custSelRef} className="field" value={customerId} onChange={(e) => setCustomerId(e.target.value)} aria-label={t('col.customer')}>
                 <option value="walk">{t('walkIn')}</option>
                 {customers.map((c) => <option key={c.id} value={c.id}>{c.name} · {c.phone}</option>)}
@@ -269,7 +271,7 @@ export default function POS() {
             <button className="btn-icon shrink-0" onClick={() => setNewCust(true)} title={t('addCustomer')} aria-label={t('addCustomer')}><UserPlus size={16} /></button>
           </div>
 
-          <div className="max-h-[300px] min-h-[96px] space-y-2 overflow-y-auto pr-1">
+          <div className="max-h-[300px] min-h-[96px] space-y-2 overflow-y-auto pr-1 lg:max-h-none lg:min-h-[110px] lg:flex-1">
             <AnimatePresence initial={false}>
               {lines.map((l) => (
                 <motion.div key={l.p.id} layout initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden">
@@ -298,7 +300,7 @@ export default function POS() {
           </div>
 
           {/* totals */}
-          <div className="mt-4 space-y-2 border-t border-dashed border-line pt-4 text-sm">
+          <div className="mt-3 shrink-0 space-y-2 border-t border-dashed border-line pt-3 text-sm">
             <div className="flex items-center justify-between"><span className="text-muted">{t('subtotal')}</span><span>{money(subtotal)}</span></div>
             <div className="flex items-center justify-between gap-3">
               <span className="text-muted">{t('discount')}</span>
@@ -314,9 +316,9 @@ export default function POS() {
             {settings.vat > 0 && <div className="flex items-center justify-between"><span className="text-muted">{t('vat')} ({num(settings.vat)}%)</span><span>{money(vat)}</span></div>}
           </div>
 
-          <div className="mt-4 grid grid-cols-4 gap-2">
+          <div className="mt-3 grid shrink-0 grid-cols-4 gap-1.5">
             {METHODS.map(({ m, icon: Icon }) => (
-              <button key={m} onClick={() => setMethod(m)} className={cn('flex flex-col items-center gap-1 rounded-2xl border px-1 py-2.5 text-[11px] font-medium transition', method === m ? 'border-brand-700 bg-brand-800 text-white' : 'border-line hover:bg-soft')}>
+              <button key={m} onClick={() => setMethod(m)} className={cn('flex flex-col items-center gap-1 rounded-xl border px-1 py-2 text-[11px] font-medium transition', method === m ? 'border-brand-700 bg-brand-800 text-white' : 'border-line hover:bg-soft')}>
                 <Icon size={16} />
                 <span className="leading-tight">{m === 'Bank Transfer' ? 'Bank' : m === 'Due' ? t('s.Due') : m}</span>
               </button>
@@ -324,7 +326,7 @@ export default function POS() {
           </div>
 
           {method === 'Cash' && (
-            <div className="mt-3 flex items-center gap-3">
+            <div className="mt-2 flex shrink-0 items-center gap-3">
               <input className="field" inputMode="decimal" value={received} onChange={(e) => setReceived(e.target.value.replace(/[^\d.]/g, ''))} placeholder={t('pos.received')} aria-label={t('pos.received')} />
               <div className="shrink-0 text-right text-xs text-muted">{t('r.change')}<div className="text-base font-bold text-ink">{money(change)}</div></div>
             </div>
@@ -333,12 +335,12 @@ export default function POS() {
             <div className="mt-3 flex items-center gap-2 rounded-2xl bg-amber-400/15 px-3 py-2 text-xs text-amber-700 dark:text-amber-400"><AlertTriangle size={14} /> {t('pos.dueNeedsCustomer')}</div>
           )}
 
-          <div className="relative mt-3">
+          <div className="relative mt-2 shrink-0">
             <Stethoscope size={15} className="pointer-events-none absolute left-4 top-3.5 text-muted" />
             <input className="field pl-10" value={doctor} onChange={(e) => setDoctor(e.target.value)} placeholder={t('pos.doctor')} aria-label={t('pos.doctor')} />
           </div>
 
-          <button className="btn-lime mt-4 h-14 w-full text-base font-bold shadow-sm" onClick={charge} disabled={!lines.length}>
+          <button className="btn-lime mt-3 h-12 w-full shrink-0 text-base font-bold shadow-sm" onClick={charge} disabled={!lines.length}>
             {t('pos.charge')} {money(total)} <kbd className="ml-1 rounded-md bg-brand-900/10 px-1.5 py-0.5 text-[10px] font-medium">F8</kbd>
           </button>
         </section>
