@@ -33,7 +33,7 @@ npm run build    # type-check + production build
 - **Purchase returns**: send items back to a supplier, stock and amount owed go down
 - **Refill reminders**: customers whose medicine is due for a refill, with WhatsApp / SMS message links (days set in Settings)
 
-- **Catalogue**: 136 sample Bangladeshi medicines and supplies in 13 categories; Settings → "Add medicines" merges them into an existing install without removing your data
+- **Catalogue**: 318 sample Bangladeshi medicines and supplies (298 medicines) in 18 categories; existing installs are topped up automatically once per catalogue version, and Settings → "Add medicines" merges any missing items without removing your data
 
 ## Not built yet
 Per-batch stock with FEFO selling, ESC/POS direct thermal printing (browser print works today), true .xlsx / PDF file generation (use the print dialog's "Save as PDF").

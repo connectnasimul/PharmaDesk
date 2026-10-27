@@ -140,6 +140,188 @@ Pregnancy Test Strip|1 pc||Generic|Medical Supplies|Other|40
 Band-Aid|20 pcs||Johnson & Johnson|Medical Supplies|Other|55
 Savlon|100ml|Chlorhexidine + Cetrimide|ACI|Medical Supplies|Other|65
 Dettol|100ml|Chloroxylenol|Reckitt|Medical Supplies|Other|70
+Ponstan|500mg|Mefenamic Acid|Pfizer|Pain Relievers|Tablet|6
+Celebrex|200mg|Celecoxib|Pfizer|Pain Relievers|Capsule|20
+Feldene|20mg|Piroxicam|Pfizer|Pain Relievers|Capsule|8
+Tizan|2mg|Tizanidine|Square|Pain Relievers|Tablet|5
+Thiocol|4mg|Thiocolchicoside|Square|Pain Relievers|Capsule|18
+Tory|60mg|Etoricoxib|Square|Pain Relievers|Tablet|11
+Clofenac|75mg/3ml|Diclofenac Sodium|Square|Pain Relievers|Injection|15
+Napa|1000mg|Paracetamol|Beximco|Pain Relievers|Tablet|3.5
+Ace|120ml|Paracetamol|Square|Pain Relievers|Syrup|40
+Aceclo|200mg SR|Aceclofenac|Square|Pain Relievers|Tablet|9
+Pantonix|40mg|Pantoprazole|Square|Gastric|Tablet|9
+Nexum|40mg|Esomeprazole|Square|Gastric|Tablet|11
+Seclo|40mg|Omeprazole|Square|Gastric|Capsule|9
+Sucral|1g|Sucralfate|Square|Gastric|Tablet|12
+Buscopan|10mg|Hyoscine Butylbromide|Sanofi|Gastric|Tablet|8
+Meverin|135mg|Mebeverine|Square|Gastric|Tablet|6
+Simecon|40mg|Simethicone|Square|Gastric|Tablet|2
+Pro-Bio||Lactobacillus|Square|Gastric|Sachet|15
+Udiliv|300mg|Ursodeoxycholic Acid|Abbott|Gastric|Tablet|25
+Racecadotril|100mg|Racecadotril|Square|Gastric|Capsule|14
+Emistat|4mg/2ml|Ondansetron|Square|Gastric|Injection|20
+Pantonix IV|40mg|Pantoprazole|Square|Gastric|Injection|65
+Zimax|200mg/5ml|Azithromycin|Square|Antibiotics|Syrup|140
+Moxacil|250mg|Amoxicillin|Square|Antibiotics|Capsule|5
+Cloxin|500mg|Cloxacillin|Square|Antibiotics|Capsule|9
+Oflox|200mg|Ofloxacin|Square|Antibiotics|Tablet|9
+Avelox|400mg|Moxifloxacin|Bayer|Antibiotics|Tablet|120
+Almex|400mg|Albendazole|Square|Antibiotics|Tablet|8
+Vermox|500mg|Mebendazole|Janssen|Antibiotics|Tablet|7
+Ivera|6mg|Ivermectin|Square|Antibiotics|Tablet|9
+Biltricide|600mg|Praziquantel|Bayer|Antibiotics|Tablet|40
+Secnid|1g|Secnidazole|Square|Antibiotics|Tablet|20
+Ornid|500mg|Ornidazole|Square|Antibiotics|Tablet|9
+Cefpo|200mg|Cefpodoxime|Square|Antibiotics|Tablet|35
+Linzo|600mg|Linezolid|Incepta|Antibiotics|Tablet|90
+Meronem|1g|Meropenem|AstraZeneca|Antibiotics|Injection|1200
+Ceftron|1g|Ceftriaxone|Beximco|Antibiotics|Injection|90
+Filmet IV|500mg/100ml|Metronidazole|Beximco|Antibiotics|Injection|55
+Gentamicin|80mg/2ml|Gentamicin|Square|Antibiotics|Injection|10
+Amikacin|500mg/2ml|Amikacin|Square|Antibiotics|Injection|45
+Cipro IV|200mg/100ml|Ciprofloxacin|Square|Antibiotics|Injection|120
+Itra|100mg|Itraconazole|Square|Antibiotics|Capsule|25
+Terbinafine|250mg|Terbinafine|Square|Antibiotics|Tablet|20
+Fexo|180mg|Fexofenadine|Square|Allergy Medication|Tablet|12
+Atarax|25mg|Hydroxyzine|UCB|Allergy Medication|Tablet|4
+Cypro|4mg|Cyproheptadine|Square|Allergy Medication|Tablet|1.5
+Montelukast|5mg|Montelukast|Acme|Allergy Medication|Tablet|10
+Histacin|2mg|Chlorpheniramine|Square|Allergy Medication|Tablet|0.8
+Cold Rid||Paracetamol + Pseudoephedrine + Chlorpheniramine|Square|Allergy Medication|Tablet|3
+Actifed|100ml|Pseudoephedrine + Triprolidine|GSK|Allergy Medication|Syrup|95
+Otrivin|0.1%|Xylometazoline|Novartis|Allergy Medication|Drops|90
+Tussin|100ml|Guaifenesin|Square|Respiratory Medicines|Syrup|85
+Ventolin Nebules|2.5mg/2.5ml|Salbutamol|GSK|Respiratory Medicines|Other|20
+Ipratropium Nebules|0.5mg|Ipratropium|Square|Respiratory Medicines|Other|30
+Deflux|200mg|Doxofylline|Square|Respiratory Medicines|Tablet|12
+Mucolyt|100ml|Ambroxol|Square|Respiratory Medicines|Syrup|70
+Seretide Evohaler|25/250mcg|Salmeterol + Fluticasone|GSK|Respiratory Medicines|Inhaler|1400
+Foracort|200mcg|Formoterol + Budesonide|Beximco|Respiratory Medicines|Inhaler|750
+Tiotropium|18mcg|Tiotropium|Square|Respiratory Medicines|Inhaler|650
+Glucomin|850mg|Metformin|Aristopharma|Diabetes Care|Tablet|4.5
+Diamicron MR|60mg|Gliclazide|Servier|Diabetes Care|Tablet|18
+Daonil|5mg|Glibenclamide|Sanofi|Diabetes Care|Tablet|2
+Acarbose|50mg|Acarbose|Square|Diabetes Care|Tablet|9
+Forxiga|10mg|Dapagliflozin|AstraZeneca|Diabetes Care|Tablet|200
+NovoRapid|100IU/ml|Insulin Aspart|Novo Nordisk|Diabetes Care|Injection|900
+Mixtard 30|100IU/ml|Human Insulin|Novo Nordisk|Diabetes Care|Injection|650
+Pen Needle|31G 8mm|Pen needles|BD|Diabetes Care|Other|1200
+Lancets|100 pcs|Lancets|Generic|Diabetes Care|Other|200
+Glimepiride + Metformin|2mg/500mg|Glimepiride + Metformin|Square|Diabetes Care|Tablet|9
+Sitagil|100mg|Sitagliptin|Incepta|Diabetes Care|Tablet|30
+Valsartan|80mg|Valsartan|Novartis|Cardiovascular|Tablet|20
+Olmecor|20mg|Olmesartan|Square|Cardiovascular|Tablet|15
+Nebix|5mg|Nebivolol|Square|Cardiovascular|Tablet|12
+Ramipril|5mg|Ramipril|Square|Cardiovascular|Tablet|8
+Enalapril|5mg|Enalapril|Square|Cardiovascular|Tablet|3
+Hydrochlorothiazide|25mg|Hydrochlorothiazide|Square|Cardiovascular|Tablet|2
+Natrilix|1.5mg|Indapamide|Servier|Cardiovascular|Tablet|12
+Isosorbide|20mg|Isosorbide Mononitrate|Square|Cardiovascular|Tablet|4
+Lanoxin|0.25mg|Digoxin|Aspen|Cardiovascular|Tablet|3
+Cordarone|200mg|Amiodarone|Sanofi|Cardiovascular|Tablet|18
+Lipanthyl|160mg|Fenofibrate|Abbott|Cardiovascular|Tablet|22
+Ezetrol|10mg|Ezetimibe|MSD|Cardiovascular|Tablet|50
+Atova|20mg|Atorvastatin|Square|Cardiovascular|Tablet|14
+Rosuva|20mg|Rosuvastatin|Square|Cardiovascular|Tablet|20
+Pentox|400mg|Pentoxifylline|Square|Cardiovascular|Tablet|9
+Vastarel|35mg|Trimetazidine|Servier|Cardiovascular|Tablet|12
+Amlo|10mg|Amlodipine|Square|Cardiovascular|Tablet|5
+Angilock|100mg|Losartan|Square|Cardiovascular|Tablet|9
+Plagrin|150mg|Clopidogrel|Square|Cardiovascular|Tablet|12
+Clonatril|0.5mg|Clonazepam|Square|Neuro & Psychiatry|Tablet|3
+Alprax|0.5mg|Alprazolam|Square|Neuro & Psychiatry|Tablet|3
+Serta|50mg|Sertraline|Square|Neuro & Psychiatry|Tablet|9
+Opram|10mg|Escitalopram|Incepta|Neuro & Psychiatry|Tablet|8
+Tryptin|10mg|Amitriptyline|Square|Neuro & Psychiatry|Tablet|2
+Levipil|500mg|Levetiracetam|Square|Neuro & Psychiatry|Tablet|18
+Tegretol|200mg|Carbamazepine|Novartis|Neuro & Psychiatry|Tablet|7
+Valparin|500mg|Sodium Valproate|Square|Neuro & Psychiatry|Tablet|9
+Donecept|5mg|Donepezil|Square|Neuro & Psychiatry|Tablet|15
+Vertin|16mg|Betahistine|Square|Neuro & Psychiatry|Tablet|8
+Flunarin|5mg|Flunarizine|Square|Neuro & Psychiatry|Tablet|5
+Sumatrin|50mg|Sumatriptan|Square|Neuro & Psychiatry|Tablet|20
+Zolpi|10mg|Zolpidem|Square|Neuro & Psychiatry|Tablet|10
+Piracetam|800mg|Piracetam|Square|Neuro & Psychiatry|Tablet|6
+Primolut-N|5mg|Norethisterone|Bayer|Women's Health|Tablet|8
+Trexa|500mg|Tranexamic Acid|Square|Women's Health|Tablet|9
+Trexa|500mg/5ml|Tranexamic Acid|Square|Women's Health|Injection|60
+Femicon||Levonorgestrel + Ethinylestradiol|Square|Women's Health|Tablet|40
+Postinor-2|1.5mg|Levonorgestrel|Gedeon Richter|Women's Health|Tablet|90
+Clotrim Vaginal|100mg|Clotrimazole|Square|Women's Health|Tablet|20
+Clomid|50mg|Clomiphene|Sanofi|Women's Health|Tablet|25
+Duphaston|10mg|Dydrogesterone|Abbott|Women's Health|Tablet|55
+Evion|400mg|Vitamin E|Merck|Women's Health|Capsule|7
+Tamsul|0.4mg|Tamsulosin|Square|Urology|Capsule|10
+Finast|5mg|Finasteride|Square|Urology|Tablet|9
+Oxybutin|5mg|Oxybutynin|Square|Urology|Tablet|5
+Cital|100ml|Sodium Citrate|Square|Urology|Syrup|110
+Nitrofur|100mg|Nitrofurantoin|Square|Urology|Capsule|8
+Thyrox|50mcg|Levothyroxine|Square|Thyroid & Hormones|Tablet|3
+Thyrox|100mcg|Levothyroxine|Square|Thyroid & Hormones|Tablet|4.5
+Carbimazole|5mg|Carbimazole|Square|Thyroid & Hormones|Tablet|3
+Predni|5mg|Prednisolone|Square|Thyroid & Hormones|Tablet|2
+Dexona|0.5mg|Dexamethasone|Square|Thyroid & Hormones|Tablet|1.5
+Dexona|4mg/ml|Dexamethasone|Square|Thyroid & Hormones|Injection|12
+Medrol|16mg|Methylprednisolone|Pfizer|Thyroid & Hormones|Tablet|25
+Hydrocort|100mg|Hydrocortisone|Square|Thyroid & Hormones|Injection|55
+Normal Saline|500ml|Sodium Chloride 0.9%|Beximco|Injectables & Fluids|Injection|55
+Ringer's Lactate|500ml|Ringer's Lactate|Beximco|Injectables & Fluids|Injection|60
+Dextrose 5%|500ml|Dextrose|Beximco|Injectables & Fluids|Injection|60
+Mecobal|500mcg/ml|Mecobalamin|Square|Injectables & Fluids|Injection|40
+Tetanus Toxoid|0.5ml|Tetanus Toxoid|Incepta|Injectables & Fluids|Injection|25
+Adrenaline|1mg/ml|Adrenaline|Square|Injectables & Fluids|Injection|20
+Vitamin K|10mg/ml|Phytomenadione|Square|Injectables & Fluids|Injection|25
+Furosemide|20mg/2ml|Furosemide|Square|Injectables & Fluids|Injection|8
+Terbinafine|1%|Terbinafine|Novartis|Dermatology|Cream|140
+Virux Cream|5%|Acyclovir|Square|Dermatology|Cream|90
+Fucidin|2%|Fusidic Acid|LEO|Dermatology|Cream|180
+Hydrocort Cream|1%|Hydrocortisone|Square|Dermatology|Cream|60
+Dermovate|0.05%|Clobetasol|GSK|Dermatology|Cream|110
+Acnex|5%|Benzoyl Peroxide|Square|Dermatology|Cream|120
+Differin|0.1%|Adapalene|Galderma|Dermatology|Cream|600
+Silverex|1%|Silver Sulfadiazine|Square|Dermatology|Cream|130
+Betadine|10%|Povidone Iodine|Mundipharma|Dermatology|Other|110
+Minoxidil|5%|Minoxidil|Square|Dermatology|Other|450
+Cetaphil|250ml|Moisturising lotion|Galderma|Dermatology|Other|1500
+Ciprocin Eye|0.3%|Ciprofloxacin|Square|Eye & Ear|Drops|75
+Tobradex|5ml|Tobramycin + Dexamethasone|Alcon|Eye & Ear|Drops|250
+Timolol|0.5%|Timolol|Square|Eye & Ear|Drops|90
+Xalatan|2.5ml|Latanoprost|Pfizer|Eye & Ear|Drops|1100
+Opatanol|5ml|Olopatadine|Alcon|Eye & Ear|Drops|550
+Tears Naturale|15ml|Hypromellose|Alcon|Eye & Ear|Drops|390
+Waxsol|10ml|Docusate Sodium|Square|Eye & Ear|Drops|85
+Clotrimazole Ear Drops|1%|Clotrimazole|Square|Eye & Ear|Drops|70
+Chlorin|0.5%|Chloramphenicol|Square|Eye & Ear|Drops|35
+Magnesium|250mg|Magnesium Oxide|Square|Vitamins & Supplements|Tablet|3
+Ferro-F|100ml|Iron + Folic Acid|Square|Vitamins & Supplements|Syrup|70
+D-Rise|50000IU|Vitamin D3|Square|Vitamins & Supplements|Capsule|30
+Biotin|10mg|Biotin|Square|Vitamins & Supplements|Tablet|10
+Aristovit-Z||Multivitamin + Zinc|Aristopharma|Vitamins & Supplements|Tablet|4
+Glucosamine + Chondroitin|500mg/400mg|Glucosamine + Chondroitin|Square|Vitamins & Supplements|Capsule|12
+Cod Liver Oil|100ml|Cod Liver Oil|Square|Vitamins & Supplements|Syrup|140
+Vitamin D3 Drops|20ml|Vitamin D3|Square|Vitamins & Supplements|Drops|85
+Ceevit|100mg/ml|Vitamin C|Square|Vitamins & Supplements|Drops|55
+Calcium Sandoz|500mg|Calcium|Sandoz|Vitamins & Supplements|Tablet|9
+Virux|200mg|Acyclovir|Square|Antiviral Drugs|Tablet|6
+Tenofovir|300mg|Tenofovir|Square|Antiviral Drugs|Tablet|45
+Sofosbuvir|400mg|Sofosbuvir|Beximco|Antiviral Drugs|Tablet|150
+Daclatasvir|60mg|Daclatasvir|Beximco|Antiviral Drugs|Tablet|160
+Lamivudine|150mg|Lamivudine|Square|Antiviral Drugs|Tablet|12
+Napa Syrup Cold|60ml|Paracetamol + Pseudoephedrine|Beximco|Baby & Mother|Syrup|45
+Zinc DS|20mg/5ml|Zinc Sulphate|Renata|Baby & Mother|Syrup|50
+Cerelac Care|400g|Infant cereal|Nestle|Baby & Mother|Other|520
+Johnson's Baby Oil|100ml|Baby oil|Johnson & Johnson|Baby & Mother|Other|220
+Feeding Bottle|250ml||Generic|Baby & Mother|Other|180
+Nasal Aspirator|1 pc||Generic|Baby & Mother|Other|120
+Nebulizer Machine|1 pc||Omron|Medical Supplies|Other|3500
+Pulse Oximeter|1 pc||Generic|Medical Supplies|Other|1200
+Hot Water Bag|1 pc||Generic|Medical Supplies|Other|250
+Knee Support|1 pc||Generic|Medical Supplies|Other|450
+Glucose-D|200g|Glucose|Generic|Medical Supplies|Other|90
+Sanitary Pad|8 pcs||Whisper|Medical Supplies|Other|60
+Adult Diaper|10 pcs||Generic|Medical Supplies|Other|650
+Hand Sanitizer|100ml|Alcohol 70%|Savlon|Medical Supplies|Other|90
 `.trim();
 
 export const CATEGORIES = [
@@ -156,6 +338,11 @@ export const CATEGORIES = [
   'Eye & Ear',
   'Baby & Mother',
   'Medical Supplies',
+  'Neuro & Psychiatry',
+  "Women's Health",
+  'Urology',
+  'Thyroid & Hormones',
+  'Injectables & Fluids',
 ];
 
 export const FORMS = ['Tablet', 'Capsule', 'Syrup', 'Injection', 'Inhaler', 'Sachet', 'Cream', 'Drops', 'Other'];
@@ -288,4 +475,17 @@ export function seedAll() {
   const customers = makeCustomers();
   const orders = makeOrders(products, customers);
   return { products, customers, orders };
+}
+
+/** Bump when the built-in catalogue grows; existing installs then receive the new items once, automatically. */
+export const CATALOG_VERSION = 2;
+
+/** Pure helper: returns `existing` plus any catalogue products not already present (matched by name + strength). */
+export function mergeCatalog(existing: Product[]): { products: Product[]; added: number } {
+  const key = (p: Product) => (p.name + '|' + p.strength).toLowerCase();
+  const have = new Set(existing.map(key));
+  const fresh = makeProducts().filter((p) => !have.has(key(p)));
+  let max = existing.reduce((m, p) => Math.max(m, Number(p.id.replace(/\D/g, '')) || 0), 0);
+  const added = fresh.map((p) => ({ ...p, id: 'P' + String(++max).padStart(3, '0') }));
+  return { products: [...existing, ...added], added: added.length };
 }

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Customer, Order, OrderItem, PayMethod, Payment, Product, Purchase, PurchaseItem, PurchaseReturn, Settings, Supplier } from '../types';
-import { makeProducts, seedAll } from '../data/seed';
+import { CATALOG_VERSION, mergeCatalog, seedAll } from '../data/seed';
 
 export const defaultSettings: Settings = {
   lang: 'en',
@@ -49,6 +49,7 @@ export const seedSuppliers = (): Supplier[] => [
 ];
 
 interface State {
+  catalogVersion: number;
   suppliers: Supplier[];
   purchases: Purchase[];
   payments: Payment[];
@@ -81,6 +82,7 @@ export const useStore = create<State>()(
   persist(
     (set, get) => ({
       settings: defaultSettings,
+      catalogVersion: CATALOG_VERSION,
       ...seedAll(),
       suppliers: seedSuppliers(),
       purchases: [],
@@ -169,14 +171,9 @@ export const useStore = create<State>()(
 
       // Adds the built-in sample catalogue without touching existing products (matched by name + strength)
       addSampleProducts: () => {
-        const s = get();
-        const key = (p: Product) => (p.name + '|' + p.strength).toLowerCase();
-        const have = new Set(s.products.map(key));
-        const fresh = makeProducts().filter((p) => !have.has(key(p)));
-        let max = s.products.reduce((m, p) => Math.max(m, Number(p.id.replace(/\D/g, '')) || 0), 0);
-        const added = fresh.map((p) => ({ ...p, id: 'P' + String(++max).padStart(3, '0') }));
-        if (added.length) set({ products: [...s.products, ...added] });
-        return added.length;
+        const r = mergeCatalog(get().products);
+        if (r.added) set({ products: r.products, catalogVersion: CATALOG_VERSION });
+        return r.added;
       },
 
       importProducts: (rows) => {
@@ -258,14 +255,22 @@ export const useStore = create<State>()(
     }),
     {
       name: 'pharmadesk-v1',
-      version: 3,
+      version: 4,
       migrate: (p: any) => p,
       // keep new settings keys when older saved data lacks them
-      merge: (persisted: any, current) => ({
-        ...current,
-        ...(persisted ?? {}),
-        settings: { ...current.settings, ...(persisted?.settings ?? {}), pins: { ...current.settings.pins, ...(persisted?.settings?.pins ?? {}) } },
-      }),
+      merge: (persisted: any, current) => {
+        const base = persisted ?? {};
+        let products = base.products ?? current.products;
+        // older installs: top up with newly added catalogue items once per catalogue version
+        if ((base.catalogVersion ?? 0) < CATALOG_VERSION && base.products) products = mergeCatalog(base.products).products;
+        return {
+          ...current,
+          ...base,
+          products,
+          catalogVersion: CATALOG_VERSION,
+          settings: { ...current.settings, ...(base.settings ?? {}), pins: { ...current.settings.pins, ...(base.settings?.pins ?? {}) } },
+        };
+      },
     }
   )
 );

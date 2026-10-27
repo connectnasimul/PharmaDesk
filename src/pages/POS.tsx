@@ -45,6 +45,8 @@ export default function POS() {
   const [newCust, setNewCust] = useState(false);
   const [nc, setNc] = useState({ name: '', phone: '' });
   const [heldOpen, setHeldOpen] = useState(false);
+  const [limit, setLimit] = useState(60);
+  useEffect(() => setLimit(60), [q, cat]);
   const searchRef = useRef<HTMLInputElement>(null);
 
   const byId = useMemo(() => new Map(products.map((p) => [p.id, p])), [products]);
@@ -54,8 +56,8 @@ export default function POS() {
     const s = q.trim().toLowerCase();
     return products
       .filter((p) => (!cat || p.category === cat) && (!s || [p.name, p.generic, p.barcode, p.manufacturer].some((v) => v.toLowerCase().includes(s))))
-      .slice(0, 60);
-  }, [products, q, cat]);
+      .slice(0, limit);
+  }, [products, q, cat, limit]);
 
   /* ----- cart maths ----- */
   const lines = cart
@@ -243,6 +245,7 @@ export default function POS() {
               );
             })}
           </div>
+          {list.length >= limit && <button className="btn-ghost mx-auto mt-4" onClick={() => setLimit((l) => l + 60)}>{t('showMore')}</button>}
           {list.length === 0 && <div className="py-12 text-center text-sm text-muted">{t('empty.products')}</div>}
         </section>
 
