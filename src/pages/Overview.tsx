@@ -87,7 +87,7 @@ export default function Overview() {
   return (
     <Page>
       {/* KPIs */}
-      <div className="-mx-1 flex snap-x gap-4 overflow-x-auto px-1 pb-1 lg:grid lg:grid-cols-3 lg:overflow-visible xl:grid-cols-6">
+      <div className="-mx-1 flex snap-x gap-4 overflow-x-auto px-1 pb-1 lg:grid lg:grid-cols-[repeat(auto-fit,minmax(190px,1fr))] lg:overflow-visible">
         <StatCard dark label={t('kpi.today')} value={stats.today} format={(n) => money(n, 0)} icon={<ShoppingBag size={19} />} trend={8.2} sub={t('sinceLastWeek')} />
         <StatCard label={t('kpi.profit')} value={stats.profit} format={(n) => money(n, 0)} icon={<TrendingUp size={19} />} iconTone="green" trend={5.4} sub={t('sinceLastWeek')} />
         <StatCard label={t('kpi.lowStock')} value={stats.low} format={(n) => num(Math.round(n))} icon={<AlertTriangle size={19} />} iconTone="amber" sub={t('items')} onClick={() => navigate('/products')} />

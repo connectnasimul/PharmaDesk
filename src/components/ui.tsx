@@ -98,7 +98,7 @@ export function StatCard({
       transition={{ duration: 0.18 }}
       onClick={onClick}
       className={cn(
-        'relative flex min-w-[220px] flex-1 flex-col justify-between rounded-3xl p-5 shadow-card transition-colors',
+        'relative flex min-w-[220px] flex-1 flex-col md:min-w-0 justify-between rounded-3xl p-5 shadow-card transition-colors',
         isDark ? 'bg-gradient-to-br from-brand-900 to-brand-700 text-white' : 'bg-card',
         onClick && 'cursor-pointer'
       )}

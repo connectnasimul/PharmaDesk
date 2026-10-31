@@ -58,7 +58,7 @@ function SidebarBody({ collapsed, onNavigate, role }: { collapsed?: boolean; onN
       title={collapsed ? t(item.key) : undefined}
       className={({ isActive }) =>
         cn(
-          'flex h-12 items-center gap-3 rounded-xl px-4 text-sm font-medium transition-all duration-200',
+          'flex h-11 shrink-0 items-center gap-3 rounded-xl px-4 text-sm font-medium transition-all duration-200',
           collapsed && 'justify-center px-0',
           isActive ? 'bg-lime text-brand-900 shadow-sm' : 'text-white/80 hover:bg-white/10 hover:text-white'
         )
@@ -81,18 +81,19 @@ function SidebarBody({ collapsed, onNavigate, role }: { collapsed?: boolean; onN
       {collapsed && (
         <button onClick={toggle} className="mx-auto mb-3 hidden text-white/70 hover:text-white lg:block" aria-label="Expand sidebar"><PanelLeft size={18} /></button>
       )}
-      <nav className="flex-1 space-y-1 overflow-y-auto">{NAV.filter((n) => canOpen(role, n.to)).map(link)}</nav>
-      <div className="space-y-1 pt-3">{NAV_BOTTOM.filter((n) => canOpen(role, n.to)).map(link)}</div>
+      <nav className="min-h-0 flex-1 space-y-1 overflow-y-auto">{[...NAV, ...NAV_BOTTOM].filter((n) => canOpen(role, n.to)).map(link)}</nav>
 
       {!collapsed && (
-        <div className="relative mt-4 overflow-hidden rounded-2xl bg-white/10 p-4">
-          <div className="mb-3 grid h-9 w-9 place-items-center rounded-xl bg-white/15 text-lime"><Heart size={17} /></div>
-          <div className="text-base font-bold text-lime">{t('free.title')}</div>
-          <p className="mt-1 text-xs leading-relaxed text-white/70">{t('free.desc')}</p>
+        <div className="mt-2 flex items-center gap-2.5 rounded-xl bg-white/10 px-3 py-2">
+          <Heart size={15} className="shrink-0 text-lime" />
+          <div className="min-w-0">
+            <div className="text-xs font-bold leading-tight text-lime">{t('free.title')}</div>
+            <p className="truncate text-[10px] leading-tight text-white/60">Ctrl+K</p>
+          </div>
         </div>
       )}
       <button
-        className={cn('mt-3 flex h-12 items-center gap-3 rounded-xl px-4 text-sm text-white/80 transition hover:bg-white/10 hover:text-white', collapsed && 'justify-center px-0')}
+        className={cn('mt-1 flex h-11 shrink-0 items-center gap-3 rounded-xl px-4 text-sm text-white/80 transition hover:bg-white/10 hover:text-white', collapsed && 'justify-center px-0')}
         onClick={() => (lock ? setRole(null) : useUI.getState().toast(t('toast.demoLogout'), 'info'))}
       >
         <LogOut size={18} />
