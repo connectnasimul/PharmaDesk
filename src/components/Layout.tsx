@@ -304,6 +304,10 @@ export default function Layout() {
         <Topbar role={role} />
         <div className="pb-6">
           <Outlet />
+          <footer className="mt-6 text-center text-xs text-muted">
+            © 2026{' '}
+            <a href="https://nasimulrizvi.com/" target="_blank" rel="noreferrer" className="font-medium text-brand-600 hover:underline">Md. Nasimul Islam Rizvi</a>. All rights reserved.
+          </footer>
         </div>
       </main>
       <Toasts />
